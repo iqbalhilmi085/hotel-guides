@@ -1,0 +1,18 @@
+{
+  "name": "ketik-hotel",
+  "version": "1.0.0",
+  "description": "Portal Ketik Hotel - CMS berbasis Static Site Generator Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [
+    "eleventy",
+    "static-site-generator",
+    "cms"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
