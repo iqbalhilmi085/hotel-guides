@@ -1,2 +1,2 @@
-CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                                     NAMES
-aab109841f3f   5f8d8a84055b   "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   ketik-hotel
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+55bc39665b92   ketik-hotel:latest   "/docker-entrypoint.…"   20 seconds ago   Up 19 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   ketik-hotel

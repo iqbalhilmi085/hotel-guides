@@ -1,66 +1,58 @@
 ﻿#0 building with "desktop-linux" instance using docker driver
 
 #1 [internal] load build definition from Dockerfile
-#1 transferring dockerfile: 887B 0.0s done
+#1 transferring dockerfile: 642B 0.0s done
 #1 DONE 0.1s
 
 #2 [internal] load metadata for docker.io/library/nginx:alpine
-#2 DONE 1.2s
+#2 DONE 1.9s
 
 #3 [internal] load metadata for docker.io/library/node:20-alpine
-#3 DONE 1.2s
+#3 DONE 1.9s
 
 #4 [internal] load .dockerignore
-#4 transferring context: 90B done
-#4 DONE 0.0s
+#4 transferring context: 32B
+#4 transferring context: 95B 0.0s done
+#4 DONE 0.1s
 
-#5 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
-#5 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.0s done
+#5 [stage-1 1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
+#5 resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752 0.0s done
 #5 DONE 0.0s
 
-#6 [stage-1 1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
-#6 resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752 0.0s done
-#6 DONE 0.0s
+#6 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#6 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.0s done
+#6 DONE 0.1s
 
 #7 [internal] load build context
-#7 transferring context: 1.41kB 0.1s done
-#7 DONE 0.1s
+#7 transferring context: 574B done
+#7 DONE 0.0s
 
-#8 [builder 2/6] WORKDIR /app
+#8 [builder 3/6] COPY package.json package-lock.json ./
 #8 CACHED
 
-#9 [builder 3/6] COPY package.json package-lock.json ./
+#9 [builder 6/6] RUN npm run build
 #9 CACHED
 
 #10 [builder 4/6] RUN npm ci
 #10 CACHED
 
 #11 [builder 5/6] COPY . .
-#11 DONE 0.0s
+#11 CACHED
 
-#12 [builder 6/6] RUN npm run build
-#12 1.024 
-#12 1.024 > ketik-hotel@1.0.0 build
-#12 1.024 > eleventy
-#12 1.024 
-#12 2.017 [11ty] Writing dist/index.html from ./src/index.njk
-#12 2.019 [11ty] Writing dist/fasilitas/index.html from ./src/fasilitas.njk
-#12 2.019 [11ty] Writing dist/tentang/index.html from ./src/tentang.njk
-#12 2.019 [11ty] Writing dist/kontak/index.html from ./src/kontak.njk
-#12 2.019 [11ty] Writing dist/kamar/index.html from ./src/kamar.njk
-#12 2.032 [11ty] Copied 1 file / Wrote 5 files in 0.19 seconds (v2.0.1)
-#12 DONE 2.3s
+#12 [builder 2/6] WORKDIR /app
+#12 CACHED
 
 #13 [stage-1 2/2] COPY --from=builder /app/dist /usr/share/nginx/html
 #13 CACHED
 
 #14 exporting to image
 #14 exporting layers done
-#14 exporting manifest sha256:c5606001c7e30e9e7dfe2f4f0967f276bb3cdc06a5b2adbc8b30630dcbdfc5e1 done
-#14 exporting config sha256:e427b8432c855058470395429c33d8c2fa65db87ea36df3faac3c12bce345dc5 done
-#14 exporting attestation manifest sha256:5db0a44510dbf293e0f8f50c3d6d9c33fa129fab40170794f338f4bd1279bc8c done
-#14 exporting manifest list sha256:e9843fa00e64680299945e6fbb0a9940b979496df9da7a1c0913223b14471011 done
+#14 exporting manifest sha256:e3b1f37730c31e114709fc48890eb677493cf61b1d61cdbc3c9ccdd4a2b9e59e
+#14 exporting manifest sha256:e3b1f37730c31e114709fc48890eb677493cf61b1d61cdbc3c9ccdd4a2b9e59e done
+#14 exporting config sha256:f7f7a9286563350beb2361d60333c6fe33c3ff637f2b77247dafeeaa702c3c13 0.0s done
+#14 exporting attestation manifest sha256:38e6272212614f30c9a0fe3366551e1dbfccd5316c9c03e3c748cc84c5edcc49 0.0s done
+#14 exporting manifest list sha256:a378d14cf7e01ba2a2c9402e5b8e04d2d82e7bcd9caae7e08205c4bb52f9de60 0.0s done
 #14 naming to docker.io/library/ketik-hotel:latest done
-#14 unpacking to docker.io/library/ketik-hotel:latest done
-#14 DONE 0.1s
+#14 unpacking to docker.io/library/ketik-hotel:latest 0.0s done
+#14 DONE 0.2s
 
