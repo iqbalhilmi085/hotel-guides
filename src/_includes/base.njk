@@ -5,19 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/">
-        <span class="brand-mark">K</span>
-        <span class="brand-text">{{ site.title }}</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+      <a class="brand" href="/">🏨 {{ site.title }}</a>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
       <nav class="nav" id="nav">
         <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Beranda</a>
         <a href="/kamar/" {% if page.url == "/kamar/" %}class="active"{% endif %}>Kamar</a>
@@ -33,51 +27,44 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">
-          <span class="brand-mark">K</span>
-          {{ site.title }}
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">🏨 {{ site.title }}</div>
+          <p class="footer-about">{{ site.description }}</p>
         </div>
-        <p class="footer-about">{{ site.description }}</p>
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/kamar/">Kamar</a></li>
+            <li><a href="/fasilitas/">Fasilitas</a></li>
+            <li><a href="/tentang/">Tentang</a></li>
+            <li><a href="/kontak/">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hubungi Kami</h4>
+          <ul>
+            <li>{{ site.alamat }}</li>
+            <li>{{ site.phone }}</li>
+            <li>{{ site.email }}</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4>Menu</h4>
-        <ul>
-          <li><a href="/">Beranda</a></li>
-          <li><a href="/kamar/">Kamar</a></li>
-          <li><a href="/fasilitas/">Fasilitas</a></li>
-          <li><a href="/tentang/">Tentang</a></li>
-          <li><a href="/kontak/">Kontak</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hubungi Kami</h4>
-        <ul>
-          <li>{{ site.alamat }}</li>
-          <li>{{ site.phone }}</li>
-          <li>{{ site.email }}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; {{ "" | currentYear }} {{ site.title }}. Seluruh hak cipta dilindungi.</p>
+      <div class="footer-bottom">
+        <p>&copy; {{ "" | currentYear }} {{ site.title }}. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    (function () {
-      var toggle = document.getElementById("navToggle");
-      var nav = document.getElementById("nav");
-      if (toggle && nav) {
-        toggle.addEventListener("click", function () {
-          var open = nav.classList.toggle("open");
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-      }
-    })();
+    // buat buka tutup menu pas dibuka dari hp
+    var toggle = document.getElementById("navToggle");
+    var nav = document.getElementById("nav");
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
   </script>
 </body>
 </html>
