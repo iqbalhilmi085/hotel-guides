@@ -1,25 +1,28 @@
-# Dockerfile buat web Ketik Hotel
-# alurnya: source dibuild pake node dulu, hasilnya disajiin pake nginx
-# jadi image finalnya kecil, gak bawa node_modules
-
-# stage 1: build file statis
+# ==========================================
+# Tahap 1: Builder
+# ==========================================
 FROM node:20-alpine AS builder
 
+# Set working directory ke /app
 WORKDIR /app
 
-# copy package.json dulu sebelum source biar layer cache-nya kepake
+# Copy file dependency lalu jalankan instalasi
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# baru copy semua source lalu build
+# Copy sisa source code
 COPY . .
-RUN npm run build
 
-# stage 2: web server
+# Jalankan perintah build untuk menghasilkan file statik di dist/
+RUN npm run build:prod
+
+# ==========================================
+# Tahap 2: Web Server
+# ==========================================
 FROM nginx:alpine
 
-# hasil build dari stage 1 dipindah ke folder html punya nginx
+# Pindahkan hasil build dari tahap 1 ke folder publik NGINX
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# port standar nginx
+# Expose port 80 agar bisa diakses dari luar container
 EXPOSE 80

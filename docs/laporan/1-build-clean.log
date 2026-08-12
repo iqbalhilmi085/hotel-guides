@@ -1,10 +1,17 @@
-﻿#0 building with "desktop-linux" instance using docker driver
+﻿docker : #0 building with "desktop-linux" instance using docker driver
+At line:1 char:131
++ ... | Out-Null; docker build -t ketik-hotel-app . > docs\laporan\1-build. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
 
 #1 [internal] load build definition from Dockerfile
-#1 transferring dockerfile: 642B 0.0s done
-#1 DONE 0.0s
+#1 transferring dockerfile:
+#1 transferring dockerfile: 757B 0.1s done
+#1 DONE 0.2s
 
-#2 [internal] load metadata for docker.io/library/nginx:alpine
+#2 [internal] load metadata for docker.io/library/node:20-alpine
 #2 ...
 
 #3 [auth] library/node:pull token for registry-1.docker.io
@@ -13,66 +20,97 @@
 #4 [auth] library/nginx:pull token for registry-1.docker.io
 #4 DONE 0.0s
 
-#5 [internal] load metadata for docker.io/library/node:20-alpine
-#5 DONE 3.6s
+#5 [internal] load metadata for docker.io/library/nginx:alpine
+#5 ...
 
-#2 [internal] load metadata for docker.io/library/nginx:alpine
-#2 DONE 3.7s
+#2 [internal] load metadata for docker.io/library/node:20-alpine
+#2 DONE 3.2s
+
+#5 [internal] load metadata for docker.io/library/nginx:alpine
+#5 DONE 3.2s
 
 #6 [internal] load .dockerignore
 #6 transferring context: 95B 0.0s done
 #6 DONE 0.0s
 
-#7 [stage-1 1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
-#7 resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752 0.1s done
-#7 DONE 0.1s
+#7 [internal] load build context
+#7 DONE 0.0s
 
-#8 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
-#8 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.1s done
+#8 [builder 1/6] FROM 
+docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#8 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 
+0.1s done
 #8 DONE 0.1s
 
-#9 [internal] load build context
-#9 transferring context: 16.30kB 0.0s done
-#9 DONE 0.0s
+#9 [stage-1 1/2] FROM 
+docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
+#9 resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752 0.1s 
+done
+#9 DONE 0.1s
+
+#7 [internal] load build context
+#7 transferring context: 1.71kB 0.1s done
+#7 DONE 0.1s
 
 #10 [builder 2/6] WORKDIR /app
 #10 CACHED
 
 #11 [builder 3/6] COPY package.json package-lock.json ./
-#11 CACHED
+#11 DONE 0.2s
 
 #12 [builder 4/6] RUN npm ci
-#12 CACHED
+#12 5.798 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#12 6.226 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out 
+lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more 
+comprehensive and powerful.
+#12 6.411 npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized 
+security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be 
+purchased (at exorbitant rates) by contacting i@izs.me
+#12 7.689 
+#12 7.689 added 213 packages, and audited 214 packages in 4s
+#12 7.689 
+#12 7.689 39 packages are looking for funding
+#12 7.689   run `npm fund` for details
+#12 7.693 
+#12 7.693 3 vulnerabilities (1 moderate, 2 high)
+#12 7.693 
+#12 7.693 To address all issues (including breaking changes), run:
+#12 7.693   npm audit fix --force
+#12 7.693 
+#12 7.693 Run `npm audit` for details.
+#12 7.696 npm notice
+#12 7.696 npm notice New major version of npm available! 10.8.2 -> 12.0.2
+#12 7.696 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#12 7.696 npm notice To update run: npm install -g npm@12.0.2
+#12 7.696 npm notice
+#12 DONE 8.3s
 
 #13 [builder 5/6] COPY . .
-#13 DONE 0.1s
+#13 DONE 0.7s
 
-#14 [builder 6/6] RUN npm run build
-#14 1.773 
-#14 1.773 > ketik-hotel@1.0.0 build
-#14 1.773 > eleventy
-#14 1.773 
-#14 2.415 [11ty] Writing dist/fasilitas/index.html from ./src/fasilitas.njk
-#14 2.415 [11ty] Writing dist/kamar/index.html from ./src/kamar.njk
-#14 2.415 [11ty] Writing dist/index.html from ./src/index.njk
-#14 2.415 [11ty] Writing dist/kontak/index.html from ./src/kontak.njk
-#14 2.415 [11ty] Writing dist/tentang/index.html from ./src/tentang.njk
-#14 2.420 [11ty] Copied 1 file / Wrote 5 files in 0.11 seconds (v2.0.1)
-#14 DONE 2.5s
-
-#7 [stage-1 1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
-#7 CACHED
+#14 [builder 6/6] RUN npm run build:prod
+#14 0.487 
+#14 0.487 > ketik-hotel@1.0.0 build:prod
+#14 0.487 > eleventy
+#14 0.487 
+#14 0.839 [11ty] Writing dist/fasilitas/index.html from ./src/fasilitas.njk
+#14 0.840 [11ty] Writing dist/index.html from ./src/index.njk
+#14 0.840 [11ty] Writing dist/kamar/index.html from ./src/kamar.njk
+#14 0.840 [11ty] Writing dist/kontak/index.html from ./src/kontak.njk
+#14 0.840 [11ty] Writing dist/tentang/index.html from ./src/tentang.njk
+#14 0.843 [11ty] Copied 1 file / Wrote 5 files in 0.08 seconds (v2.0.1)
+#14 DONE 0.9s
 
 #15 [stage-1 2/2] COPY --from=builder /app/dist /usr/share/nginx/html
-#15 DONE 0.0s
+#15 CACHED
 
 #16 exporting to image
-#16 exporting layers 0.1s done
-#16 exporting manifest sha256:bb4452a5a37610c6cac9dee6bd12390a2fc2cf096e89c30bbca1b5c49efc4a6e 0.0s done
-#16 exporting config sha256:ca837d4ef9b16b5b9cf155c99e87437afeaeab06721b78c6e908ffe7bf588d3f 0.0s done
-#16 exporting attestation manifest sha256:7f64bb7acec6aa9f500307e57900414bdffe9d4a9c099378b8e150cbf9211b03 0.0s done
-#16 exporting manifest list sha256:8651c94651da72683b2b551afb869cdcae9b088c3f4fefff19747791152e2cee 0.0s done
-#16 naming to docker.io/library/ketik-hotel:latest done
-#16 unpacking to docker.io/library/ketik-hotel:latest 0.0s done
-#16 DONE 0.2s
+#16 exporting layers done
+#16 exporting manifest sha256:bb4452a5a37610c6cac9dee6bd12390a2fc2cf096e89c30bbca1b5c49efc4a6e done
+#16 exporting config sha256:ca837d4ef9b16b5b9cf155c99e87437afeaeab06721b78c6e908ffe7bf588d3f done
+#16 exporting attestation manifest sha256:a92a13aa8fb4b85ea5f06157254eabc3ec2ff1321db8695fc72e9b4faaca4504 0.0s done
+#16 exporting manifest list sha256:152183357c3a0eeacc3d909cad1dd021365d9a3c93bf7dd2069e3dcba0f7678a 0.0s done
+#16 naming to docker.io/library/ketik-hotel-app:latest done
+#16 unpacking to docker.io/library/ketik-hotel-app:latest 0.1s done
+#16 DONE 0.3s
 

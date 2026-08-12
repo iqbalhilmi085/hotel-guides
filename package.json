@@ -4,6 +4,7 @@
   "description": "Portal Ketik Hotel - CMS berbasis Static Site Generator Eleventy",
   "scripts": {
     "build": "eleventy",
+    "build:prod": "eleventy",
     "serve": "eleventy --serve"
   },
   "keywords": [
