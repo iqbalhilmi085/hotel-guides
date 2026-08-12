@@ -1,27 +1,25 @@
-# ==========================================================
-# Stage 1 - Builder
-# Membangun file static dari source code Ketik Hotel
-# ==========================================================
+# Dockerfile buat web Ketik Hotel
+# alurnya: source dibuild pake node dulu, hasilnya disajiin pake nginx
+# jadi image finalnya kecil, gak bawa node_modules
+
+# stage 1: build file statis
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Salin dependensi terlebih dahulu agar memanfaatkan layer caching
+# copy package.json dulu sebelum source biar layer cache-nya kepake
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Salin seluruh source code lalu build production (output ke dist/)
+# baru copy semua source lalu build
 COPY . .
 RUN npm run build
 
-# ==========================================================
-# Stage 2 - Web Server
-# Menyajikan file static melalui NGINX (image ringan)
-# ==========================================================
+# stage 2: web server
 FROM nginx:alpine
 
-# Salin hasil build dari stage builder ke direktori publik NGINX
+# hasil build dari stage 1 dipindah ke folder html punya nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Buka port 80 sebagai port standar web server
+# port standar nginx
 EXPOSE 80
