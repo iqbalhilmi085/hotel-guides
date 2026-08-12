@@ -1,6 +1,5 @@
-/* css buat website ketik hotel
-   dibuat pas magang, pake warna navy sama kuning
-   font pake arial aja biar gampang */
+/* css buat web ketik hotel
+   polos aja, pake warna navy sama kuning */
 
 * {
   margin: 0;
@@ -9,77 +8,58 @@
 }
 
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
   color: #333;
   line-height: 1.6;
 }
 
 a {
   color: #1a3a6b;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ============ header ============ */
+/* ===== header ===== */
 
 .site-header {
   background: #0d1b3e;
   padding: 12px 0;
-  position: sticky;
-  top: 0;
 }
 
 .nav-wrap {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .brand {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-}
-
-.nav {
-  display: flex;
+  text-decoration: none;
 }
 
 .nav a {
   color: #ddd;
-  padding: 8px 13px;
-  font-size: 14px;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
 .nav a:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
 }
 
 .nav a.active {
-  background: #f5c842;
-  color: #0d1b3e;
-  border-radius: 20px;
-  font-weight: bold;
+  color: #f5c842;
 }
 
 .nav-toggle {
@@ -87,369 +67,203 @@ img {
   background: none;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
 }
 
-/* ============ tombol ============ */
+/* ===== tombol ===== */
 
 .btn {
   display: inline-block;
-  padding: 10px 24px;
-  border-radius: 25px;
+  background: #f5c842;
+  color: #0d1b3e;
+  padding: 9px 22px;
   font-weight: bold;
-  font-size: 14px;
-  border: 2px solid transparent;
-}
-
-.btn:hover {
+  border-radius: 5px;
   text-decoration: none;
 }
 
-.btn-primary {
-  background: #f5c842;
-  color: #0d1b3e;
-}
-
-.btn-primary:hover {
+.btn:hover {
   background: #e0b02e;
 }
 
 .btn-outline {
-  border-color: #fff;
+  background: none;
+  border: 1px solid #fff;
   color: #fff;
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.btn-light {
-  background: #fff;
-  color: #0d1b3e;
-}
-
-.btn-sm {
-  padding: 6px 14px;
-  font-size: 13px;
-}
-
-/* ============ hero beranda ============ */
+/* ===== hero ===== */
 
 .hero {
   background: #0d1b3e;
-  text-align: center;
   color: #fff;
-  padding: 70px 20px;
-}
-
-.badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #f5c842;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin-bottom: 15px;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 34px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  color: #cfcfcf;
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 15px;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 
-.hero-actions {
-  margin-top: 24px;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
+.hero .btn {
+  margin: 0 5px;
 }
 
-/* ============ statistik ============ */
+/* ===== section ===== */
 
-.stats-grid {
-  display: flex;
-  background: #fff;
-  border-radius: 10px;
-  margin-top: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+.section,
+.page-section {
+  padding: 45px 0;
 }
 
-.stat {
-  flex: 1;
-  text-align: center;
-  padding: 25px 10px;
-  border-right: 1px solid #eee;
-}
-
-.stat:last-child {
-  border-right: none;
-}
-
-.stat-value {
-  display: block;
-  font-size: 30px;
-  font-weight: bold;
+h2 {
   color: #0d1b3e;
-}
-
-.stat-label {
-  font-size: 13px;
-  color: #777;
-}
-
-/* ============ section umum ============ */
-
-.section {
-  padding: 50px 0;
-}
-
-.section-head {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.section-head h2 {
-  font-size: 26px;
+h3 {
   color: #0d1b3e;
   margin-bottom: 6px;
 }
 
-.section-head p {
-  color: #777;
-}
-
-/* ============ kartu kamar ============ */
+/* ===== kartu kamar ===== */
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   flex: 1;
-  min-width: 280px;
-  background: #fff;
+  min-width: 250px;
+  background: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card-banner {
-  background: #1a3a6b;
-  color: #fff;
-  text-align: center;
-  font-size: 42px;
-  padding: 28px 0;
-}
-
-.b-deluxe {
-  background: #0d1b3e;
-}
-
-.b-suite {
-  background: #8a6a2f;
-}
-
-.card-body {
+  border-radius: 5px;
   padding: 20px;
 }
 
-.card-body h3 {
-  margin-bottom: 6px;
-  color: #0d1b3e;
-}
-
-.card-body p {
+.card p {
   font-size: 14px;
-  color: #555;
   margin-bottom: 10px;
 }
 
-.card-tags span {
-  display: inline-block;
-  background: #eef2f9;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 15px;
-  margin: 3px 3px 0 0;
-  color: #1a3a6b;
+/* ===== daftar fasilitas ===== */
+
+.facility-list {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.card-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
-  border-top: 1px solid #eee;
+.facility-list li {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0d1b3e;
-}
-
-.price-note {
-  font-size: 12px;
-  color: #999;
-  font-weight: normal;
-}
-
-/* ============ fasilitas ============ */
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.feature {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.feature-icon {
-  font-size: 28px;
-}
-
-.feature h3 {
-  font-size: 16px;
-  color: #0d1b3e;
-  margin-bottom: 4px;
-}
-
-.feature p {
-  font-size: 13px;
-  color: #666;
-}
-
-/* ============ CTA ============ */
+/* ===== CTA ===== */
 
 .cta {
-  background: #0d1b3e;
-  text-align: center;
-  color: #fff;
-  padding: 60px 20px;
-}
-
-.cta h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.cta p {
-  color: #cfcfcf;
-  margin-bottom: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============ halaman dalam ============ */
-
-.page-hero {
   background: #0d1b3e;
   color: #fff;
   text-align: center;
   padding: 50px 20px;
 }
 
+.cta h2 {
+  color: #fff;
+}
+
+.cta p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.cta .btn {
+  background: #fff;
+  color: #0d1b3e;
+}
+
+/* ===== halaman dalam ===== */
+
+.page-hero {
+  background: #0d1b3e;
+  color: #fff;
+  text-align: center;
+  padding: 45px 20px;
+}
+
 .page-hero h1 {
-  font-size: 30px;
   margin-bottom: 8px;
 }
 
 .page-hero p {
-  color: #cfcfcf;
+  color: #ccc;
 }
 
-.page-section {
-  padding: 45px 0;
-}
-
-/* ============ tabel tarif ============ */
-
-.table-wrap {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow-x: auto;
-}
+/* ===== tabel tarif ===== */
 
 .rate {
   width: 100%;
   border-collapse: collapse;
+  background: #fff;
 }
 
 .rate th,
 .rate td {
-  padding: 12px 15px;
+  border: 1px solid #ddd;
+  padding: 10px 14px;
   text-align: left;
   font-size: 14px;
 }
 
-.rate thead th {
+.rate th {
   background: #0d1b3e;
   color: #fff;
 }
 
-.rate tbody tr {
-  border-top: 1px solid #eee;
-}
-
-.rate tbody tr:hover {
-  background: #faf6ec;
-}
-
-.price-tag {
-  font-weight: bold;
-  color: #0d1b3e;
-}
-
-/* ============ kontak ============ */
+/* ===== kontak ===== */
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .contact-card {
-  background: #fff;
+  flex: 1;
+  min-width: 200px;
+  background: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 20px;
   text-align: center;
-  padding: 25px 15px;
 }
 
 .contact-card h3 {
-  margin: 8px 0 4px;
-  color: #0d1b3e;
+  margin-bottom: 8px;
 }
 
 .contact-card p {
-  font-size: 13px;
-  color: #666;
+  font-size: 14px;
 }
 
-/* ============ tentang ============ */
+/* ===== tentang ===== */
 
 .prose {
   max-width: 750px;
@@ -458,130 +272,99 @@ img {
 
 .prose p {
   margin-bottom: 14px;
-  font-size: 15px;
 }
 
 .highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
 .highlight {
-  background: #fff;
+  flex: 1;
+  min-width: 220px;
+  background: #f9f9f9;
   border: 1px solid #ddd;
-  border-left: 4px solid #f5c842;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 18px;
 }
 
-.highlight h3 {
-  color: #0d1b3e;
-  margin-bottom: 5px;
-}
-
 .highlight p {
-  font-size: 13px;
-  color: #666;
+  font-size: 14px;
 }
 
-/* ============ footer ============ */
+/* ===== footer ===== */
 
 .site-footer {
   background: #0d1b3e;
   color: #ccc;
+  padding: 30px 0 20px;
   margin-top: 40px;
+  font-size: 14px;
 }
 
 .footer-grid {
   display: flex;
   gap: 40px;
-  padding: 40px 0 25px;
-  justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.footer-brand {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
+.footer-grid h4 {
+  color: #f5c842;
   margin-bottom: 8px;
 }
 
-.footer-about {
-  font-size: 13px;
-  max-width: 300px;
+.footer-grid ul li {
+  margin-bottom: 5px;
 }
 
-.site-footer h4 {
-  color: #f5c842;
-  font-size: 13px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.site-footer ul li {
-  margin-bottom: 6px;
-  font-size: 13px;
-}
-
-.site-footer ul a {
+.footer-grid a {
   color: #ccc;
+  text-decoration: none;
 }
 
-.site-footer ul a:hover {
+.footer-grid a:hover {
   color: #fff;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
-  padding: 15px 0;
-  font-size: 12px;
+  padding-top: 15px;
+  font-size: 13px;
   color: #888;
 }
 
-/* ============ responsive ============ */
+/* ===== responsive ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .nav-toggle {
     display: block;
   }
 
   .nav {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #0d1b3e;
-    padding: 10px;
   }
 
   .nav.open {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
   }
 
-  .stats-grid {
-    flex-wrap: wrap;
+  .nav a {
+    margin-left: 0;
   }
 
-  .stat {
-    flex: 50%;
-    border-bottom: 1px solid #eee;
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr;
+  .cards,
+  .highlight-grid {
+    flex-direction: column;
   }
 
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .highlight-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }

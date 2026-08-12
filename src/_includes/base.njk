@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/">🏨 {{ site.title }}</a>
-      <button class="nav-toggle" id="navToggle">&#9776;</button>
+      <a class="brand" href="/">{{ site.title }}</a>
+      <button class="nav-toggle" id="navToggle">Menu</button>
       <nav class="nav" id="nav">
         <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Beranda</a>
         <a href="/kamar/" {% if page.url == "/kamar/" %}class="active"{% endif %}>Kamar</a>
@@ -30,8 +29,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">🏨 {{ site.title }}</div>
-          <p class="footer-about">{{ site.description }}</p>
+          <h4>{{ site.title }}</h4>
+          <p>{{ site.description }}</p>
         </div>
         <div>
           <h4>Menu</h4>
