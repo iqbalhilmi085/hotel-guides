@@ -4,9 +4,9 @@ layout: base.njk
 ---
 
 <section class="hero">
-  <div class="container hero-inner">
-    <span class="badge">Hotel bintang empat, kawasan Thamrin</span>
-    <h1>Selamat Datang di <span class="hero-accent">Ketik Hotel</span></h1>
+  <div class="container">
+    <span class="badge">Hotel bintang empat di Jakarta</span>
+    <h1>Selamat Datang di Ketik Hotel</h1>
     <p>{{ site.description }}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/kamar/">Pesan Kamar</a>
@@ -15,23 +15,25 @@ layout: base.njk
   </div>
 </section>
 
-<section class="stats">
-  <div class="container stats-grid">
-    <div class="stat">
-      <span class="stat-value">112</span>
-      <span class="stat-label">Kamar &amp; Suite</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">4.7/5</span>
-      <span class="stat-label">Rating dari 2.300+ Tamu</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">18</span>
-      <span class="stat-label">Tahun Beroperasi</span>
-    </div>
-    <div class="stat">
-      <span class="stat-value">96%</span>
-      <span class="stat-label">Tamu Booking Ulang</span>
+<section class="section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-value">112</span>
+        <span class="stat-label">Kamar &amp; Suite</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">4.7/5</span>
+        <span class="stat-label">Rating dari 2.300+ Tamu</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">18</span>
+        <span class="stat-label">Tahun Beroperasi</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">96%</span>
+        <span class="stat-label">Tamu Booking Ulang</span>
+      </div>
     </div>
   </div>
 </section>
@@ -39,21 +41,13 @@ layout: base.njk
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Pilihan Kami</span>
       <h2>Kamar Populer</h2>
       <p>Tiga tipe kamar yang paling sering dipesan tamu bisnis dan keluarga.</p>
     </div>
 
     <div class="cards">
       <article class="card">
-        <div class="card-banner b-superior">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 4v16" />
-            <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-            <path d="M2 17h20" />
-            <path d="M6 8v9" />
-          </svg>
-        </div>
+        <div class="card-banner b-superior">🛏️</div>
         <div class="card-body">
           <h3>Kamar Superior</h3>
           <p>Kamar 24 m&sup2; dengan satu king bed, menghadap Bundaran HI. Lantai bawah jadi dekat dengan lift — cocok untuk tamu yang sering keluar-masuk.</p>
@@ -64,20 +58,13 @@ layout: base.njk
           </div>
         </div>
         <div class="card-foot">
-          <span class="price">Rp750rb<span class="price-note">/malam</span></span>
+          <span class="price">Rp749.000<span class="price-note">/malam</span></span>
           <a class="btn btn-sm btn-primary" href="/kamar/">Detail</a>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-banner b-deluxe">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 4v16" />
-            <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-            <path d="M2 17h20" />
-            <path d="M6 8v9" />
-          </svg>
-        </div>
+        <div class="card-banner b-deluxe">🛎️</div>
         <div class="card-body">
           <h3>Kamar Deluxe</h3>
           <p>Lebih lega di 32 m&sup2;, beberapa unit menghadap Jl. Thamrin. Termasuk akses lounge di lantai 8 dan minibar yang diisi ulang setiap hari.</p>
@@ -88,20 +75,13 @@ layout: base.njk
           </div>
         </div>
         <div class="card-foot">
-          <span class="price">Rp1,1jt<span class="price-note">/malam</span></span>
+          <span class="price">Rp1.150.000<span class="price-note">/malam</span></span>
           <a class="btn btn-sm btn-primary" href="/kamar/">Detail</a>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-banner b-suite">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 4v16" />
-            <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-            <path d="M2 17h20" />
-            <path d="M6 8v9" />
-          </svg>
-        </div>
+        <div class="card-banner b-suite">👑</div>
         <div class="card-body">
           <h3>Suite</h3>
           <p>Unit teratas dengan ruang tamu terpisah dan kamar mandi marmer. Tamu suite cek in di lounge khusus dan ada butler yang bisa dihubungi lewat tombol di kamar.</p>
@@ -112,7 +92,7 @@ layout: base.njk
           </div>
         </div>
         <div class="card-foot">
-          <span class="price">Rp2,5jt<span class="price-note">/malam</span></span>
+          <span class="price">Rp2.400.000<span class="price-note">/malam</span></span>
           <a class="btn btn-sm btn-primary" href="/kamar/">Detail</a>
         </div>
       </article>
@@ -120,22 +100,16 @@ layout: base.njk
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Layanan</span>
       <h2>Fasilitas Unggulan</h2>
       <p>Fasilitas yang bisa dipakai semua tamu, beserta jam operasionalnya.</p>
     </div>
 
     <div class="feature-grid">
       <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 9c1.7 1 3.3 1 5 0s3.3-1 5 0 3.3 1 5 0 3.3-1 5 0" />
-            <path d="M2 15c1.7 1 3.3 1 5 0s3.3-1 5 0 3.3 1 5 0 3.3-1 5 0" />
-          </svg>
-        </div>
+        <div class="feature-icon">🏊</div>
         <div>
           <h3>Kolam Renang</h3>
           <p>Kolam outdoor di lantai 9, buka 06.00–22.00. Ada towel station dan kolam anak terpisah yang dangkal.</p>
@@ -143,16 +117,7 @@ layout: base.njk
       </div>
 
       <div class="feature">
-        <div class="feature-icon icon-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6.5 6.5l11 11" />
-            <path d="M21 21l-2-2" />
-            <path d="M5 5L3 3" />
-            <path d="M18 22l2-2" />
-            <path d="M4 6L2 8" />
-            <path d="M16 2l-6 6" />
-          </svg>
-        </div>
+        <div class="feature-icon">💪</div>
         <div>
           <h3>Pusat Kebugaran</h3>
           <p>Gym di lantai 3 buka 24 jam, akses pakai kartu kamar. Ada 6 treadmill, free weight, dan dumbbell sampai 30 kg.</p>
@@ -160,15 +125,7 @@ layout: base.njk
       </div>
 
       <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-            <line x1="6" y1="1" x2="6" y2="4" />
-            <line x1="10" y1="1" x2="10" y2="4" />
-            <line x1="14" y1="1" x2="14" y2="4" />
-          </svg>
-        </div>
+        <div class="feature-icon">🍽️</div>
         <div>
           <h3>Restoran &amp; Bar</h3>
           <p>Sarapan buka 06.00–10.30 di lantai 21. Menu nusantara dan western, plus coffee corner untuk tamu yang cuma mau ngopi.</p>
@@ -176,14 +133,7 @@ layout: base.njk
       </div>
 
       <div class="feature">
-        <div class="feature-icon icon-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-            <line x1="12" y1="20" x2="12.01" y2="20" />
-          </svg>
-        </div>
+        <div class="feature-icon">📶</div>
         <div>
           <h3>Wi-Fi</h3>
           <p>Sampai 100 Mbps di kamar dan area publik. Satu jaringan, password sama untuk semua perangkat tamu.</p>
@@ -191,14 +141,7 @@ layout: base.njk
       </div>
 
       <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11" />
-            <path d="M3 11h18v6a1 1 0 0 1-1 1h-1a2 2 0 0 1-4 0H9a2 2 0 0 1-4 0H4a1 1 0 0 1-1-1v-6z" />
-            <line x1="6" y1="14" x2="6.01" y2="14" />
-            <line x1="18" y1="14" x2="18.01" y2="14" />
-          </svg>
-        </div>
+        <div class="feature-icon">🚌</div>
         <div>
           <h3>Antar-Jemput Bandara</h3>
           <p>Shuttle gratis ke Bandara Soekarno–Hatta tiap 2 jam, dan ke Stasiun Gambir sesuai permintaan resepsionis.</p>
@@ -206,12 +149,7 @@ layout: base.njk
       </div>
 
       <div class="feature">
-        <div class="feature-icon icon-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2" />
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-          </svg>
-        </div>
+        <div class="feature-icon">🏢</div>
         <div>
           <h3>Ruang Pertemuan</h3>
           <p>Ballroom utama untuk 500 orang, plus 8 ruang rapat kecil di lantai 2 dengan projector dan layar.</p>
@@ -222,8 +160,7 @@ layout: base.njk
 </section>
 
 <section class="cta">
-  <div class="container cta-inner">
-    <span class="eyebrow">Reservasi</span>
+  <div class="container">
     <h2>Tertarik menginap?</h2>
     <p>Hubungi resepsionis untuk cek ketersediaan kamar dan harga di tanggal kunjungan Anda. Rata-rata kamar penuh di akhir pekan, jadi sebaiknya booking lebih awal.</p>
     <a class="btn btn-light" href="/kontak/">Hubungi Kami</a>
